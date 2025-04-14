@@ -29,7 +29,7 @@ export default function PreviewPolygon() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/polygons")
+    fetch("https://gis-backend-production-f4bc.up.railway.app/polygons")
       .then(response => response.json())
       .then(data => {
         console.log("Fetched Polygons:", data);
