@@ -93,7 +93,7 @@ export default function AddPolygon() {
     const newPolygon = { name, description, points: polygon };
 
     try {
-      const response = await fetch("http://localhost:5000/polygons", {
+      const response = await fetch("https://gis-backend-production-f4bc.up.railway.app/polygons", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPolygon),
