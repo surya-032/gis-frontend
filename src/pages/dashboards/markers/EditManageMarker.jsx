@@ -34,7 +34,7 @@ export default function ManageMarker() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/markers")
+    fetch("https://gis-backend-production-f4bc.up.railway.app/markers")
       .then(response => response.json())
       .then(data => setMarkers(data))
       .catch(error => console.error("Error fetching markers:", error));
