@@ -32,7 +32,7 @@ export default function EditManagePolygon() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/polygons")
+    fetch("https://gis-backend-production-f4bc.up.railway.app/polygons")
       .then(response => response.json())
       .then(data => setPolygons(data))
       .catch(error => console.error("Error fetching polygons:", error));
