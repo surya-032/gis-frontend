@@ -16,7 +16,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/login", {
+      const response = await fetch("https://gis-backend-production-f4bc.up.railway.app/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -33,7 +33,7 @@ export default function Login() {
 
       localStorage.setItem("token", data.token);
 
-      const userResponse = await fetch("http://localhost:5000/users", {
+      const userResponse = await fetch("https://gis-backend-production-f4bc.up.railway.app/users", {
         method: "GET",
         headers: { Authorization: `Bearer ${data.token}` },
       });
