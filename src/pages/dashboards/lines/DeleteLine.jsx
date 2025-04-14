@@ -32,7 +32,7 @@ export default function DeleteLine() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/routes")
+    fetch("https://gis-backend-production-f4bc.up.railway.app/routes")
       .then(response => response.json())
       .then(data => setRoutes(data))
       .catch(error => console.error("Error fetching routes:", error));
@@ -57,7 +57,7 @@ export default function DeleteLine() {
     if (!window.confirm("Apakah Anda yakin ingin menghapus rute ini?")) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/routes/${routeId}`, {
+      const response = await fetch(`https://gis-backend-production-f4bc.up.railway.app/routes/${routeId}`, {
         method: "DELETE",
       });
 
