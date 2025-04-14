@@ -3,8 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import iconUrl from "leaflet/dist/images/marker-icon.png";
+import iconShadow from "leaflet/dist/images/marker-shadow.png";
 
-const markerIcon = new L.Icon.Default();
+const markerIcon = new L.Icon({
+  iconUrl,
+  shadowUrl: iconShadow,
+  iconSize: [30, 50],
+  iconAnchor: [15, 50],
+});
 
 function ChangeView({ center, zoom }) {
   const map = useMap();
