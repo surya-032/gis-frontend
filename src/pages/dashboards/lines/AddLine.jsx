@@ -45,7 +45,7 @@ export default function AddLine() {
     const newRoute = { name, description, points };
 
     try {
-      const response = await fetch("http://localhost:5000/routes", {
+      const response = await fetch("https://gis-backend-production-f4bc.up.railway.app/routes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newRoute),
