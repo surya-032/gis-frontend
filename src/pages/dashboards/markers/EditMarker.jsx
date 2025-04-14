@@ -43,7 +43,7 @@ export default function EditMarker() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/markers/${id}`)
+    fetch(`https://gis-backend-production-f4bc.up.railway.app/markers/${id}`)
       .then(response => response.json())
       .then(data => {
         setName(data.name);
