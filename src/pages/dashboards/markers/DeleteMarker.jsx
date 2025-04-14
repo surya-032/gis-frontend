@@ -43,7 +43,7 @@ export default function DeleteMarker() {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/markers")
+    fetch("https://gis-backend-production-f4bc.up.railway.app/markers")
       .then(response => response.json())
       .then(data => setMarkers(data))
       .catch(error => console.error("Error fetching markers:", error));
@@ -70,7 +70,7 @@ export default function DeleteMarker() {
     if (!window.confirm("Apakah Anda yakin ingin menghapus marker ini?")) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/markers/${markerId}`, {
+      const response = await fetch(`https://gis-backend-production-f4bc.up.railway.app/markers/${markerId}`, {
         method: "DELETE",
       });
 
