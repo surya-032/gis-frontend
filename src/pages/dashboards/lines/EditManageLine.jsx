@@ -32,7 +32,7 @@ export default function EditManageLine() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/routes")
+    fetch("https://gis-backend-production-f4bc.up.railway.app/routes")
       .then(response => response.json())
       .then(data => setRoutes(data))
       .catch(error => console.error("Error fetching routes:", error));
