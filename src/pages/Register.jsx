@@ -25,7 +25,7 @@ export default function Register() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/register", {
+      const response = await fetch("https://gis-backend-production-f4bc.up.railway.app/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nama_lengkap: name, email, password }),
