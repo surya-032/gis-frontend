@@ -4,8 +4,14 @@ import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { FaSave, FaMapMarkerAlt, FaCheckCircle } from "react-icons/fa";
-
-const markerIcon = new L.Icon.Default();
+import iconUrl from "leaflet/dist/images/marker-icon.png";
+import iconShadow from "leaflet/dist/images/marker-shadow.png";
+const markerIcon = new L.Icon({
+  iconUrl,
+  shadowUrl: iconShadow,
+  iconSize: [30, 50],
+  iconAnchor: [15, 50],
+});
 
 function LocationSelector({ setCoords }) {
   useMap().on("click", (e) => {
