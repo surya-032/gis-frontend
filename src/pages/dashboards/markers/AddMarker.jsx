@@ -44,7 +44,7 @@ export default function AddMarker() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/markers", {
+      const response = await fetch("https://gis-backend-production-f4bc.up.railway.app/markers", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(markerData),
