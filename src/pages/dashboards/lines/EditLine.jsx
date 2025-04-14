@@ -48,7 +48,7 @@ export default function EditRoute() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/routes/${id}`)
+    fetch(`https://gis-backend-production-f4bc.up.railway.app/routes/${id}`)
       .then(response => response.json())
       .then(data => {
         setName(data.name);
@@ -68,7 +68,7 @@ export default function EditRoute() {
     const updatedRoute = { name, description, points };
 
     try {
-      const response = await fetch(`http://localhost:5000/routes/${id}`, {
+      const response = await fetch(`https://gis-backend-production-f4bc.up.railway.app/routes/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedRoute),
