@@ -29,7 +29,7 @@ export default function DeletePolygon() {
   };
 
   useEffect(() => {
-    fetch("https://gis-backend-production-f4bc.up.railway.app/polygons")
+    fetch("/api/polygons")
       .then(response => response.json())
       .then(data => {
         const formattedData = data.map(polygon => ({
@@ -59,7 +59,7 @@ export default function DeletePolygon() {
     if (!window.confirm("Apakah Anda yakin ingin menghapus polygon ini?")) return;
 
     try {
-      const response = await fetch(`https://gis-backend-production-f4bc.up.railway.app/polygons/${polygonId}`, {
+      const response = await fetch(`/api/polygons/${polygonId}`, {
         method: "DELETE",
       });
 
