@@ -29,7 +29,7 @@ export default function PreviewLine() {
   };
 
   useEffect(() => {
-    fetch("https://gis-backend-production-f4bc.up.railway.app/routes")
+    fetch("/api/routes")
       .then(response => response.json())
       .then(data => {
         console.log("Fetched Routes:", data);
