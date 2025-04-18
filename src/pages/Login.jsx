@@ -16,7 +16,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("192.168.4.4:5000/login", {
+      const response = await fetch("http://localhost:11032/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
