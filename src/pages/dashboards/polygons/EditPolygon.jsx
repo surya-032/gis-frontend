@@ -94,7 +94,7 @@ export default function EditPolygon() {
   };
 
   useEffect(() => {
-    fetch(`https://gis-backend-production-f4bc.up.railway.app/polygons/${id}`)
+    fetch(`/api/polygons/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setName(data.name || "");
@@ -115,7 +115,7 @@ export default function EditPolygon() {
     const updatedData = { name, description, points: polygon };
 
     try {
-      const response = await fetch(`https://gis-backend-production-f4bc.up.railway.app/polygons/${id}`, {
+      const response = await fetch(`/api/polygons/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedData),
