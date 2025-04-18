@@ -49,7 +49,7 @@ export default function EditMarker() {
   };
 
   useEffect(() => {
-    fetch(`https://gis-backend-production-f4bc.up.railway.app/markers/${id}`)
+    fetch(`/api/markers/${id}`)
       .then(response => response.json())
       .then(data => {
         setName(data.name);
@@ -72,7 +72,7 @@ export default function EditMarker() {
     };
 
     try {
-      const response = await fetch(`https://gis-backend-production-f4bc.up.railway.app/markers/${id}`, {
+      const response = await fetch(`/api/markers/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedMarker),
