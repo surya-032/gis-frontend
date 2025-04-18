@@ -25,7 +25,7 @@ export default function Register() {
     }
 
     try {
-      const response = await fetch("https://gis_2205551032.manpits.xyz/register", {
+      const response = await fetch("http://localhost:11032/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nama_lengkap: name, email, password }),
