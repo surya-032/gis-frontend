@@ -42,7 +42,7 @@ export default function PreviewMarker() {
   };
 
   useEffect(() => {
-    fetch("https://gis-backend-production-f4bc.up.railway.app/markers")
+    fetch("/api/markers")
       .then(response => response.json())
       .then(data => setMarkers(data))
       .catch(error => console.error("Error fetching markers:", error));
