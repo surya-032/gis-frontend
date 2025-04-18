@@ -33,7 +33,7 @@ export default function Login() {
 
       localStorage.setItem("token", data.token);
 
-      const userResponse = await fetch("https://gis-backend-production-f4bc.up.railway.app/users", {
+      const userResponse = await fetch("/api/users", {
         method: "GET",
         headers: { Authorization: `Bearer ${data.token}` },
       });
